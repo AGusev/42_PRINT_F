@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 16:26:46 by agusev            #+#    #+#             */
-/*   Updated: 2019/02/20 15:37:35 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/07 13:10:20 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,7 @@ int					ft_str_is_lowercase(char *str);
 int					ft_str_is_uppercase(char *str);
 int					ft_isupper(int c);
 int					ft_islower(int c);
+char				*ft_itoa_base(long long value, int base);
+size_t				ft_abs(long long nb);
 
 #endif
