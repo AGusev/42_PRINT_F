@@ -6,28 +6,36 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/13 21:39:24 by agusev            #+#    #+#              #
-#    Updated: 2019/03/07 13:24:37 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/12 12:24:55 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=
-SRC=
-
-OBJ=
-
-INCL=./
-
-$(NAME): $(SRC) libft.h
-	gcc -Wall -Wextra -Werror -I $(INCL) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+NAME = libftprintf.a
+SRCS =    ft_printf.c \
+                src/
+                src/
+                src/
+OFILES =    ft_printf.o \
+                   
+INCLUDES = -I fT_printf.h
+LIBFT_H = libft/libft.h
+LIBFT = libft/libft.a
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
+$(NAME):
+    make -C libft
+    gcc $(FLAGS) $(INCLUDES) -c $(SRCS)
+    ar rc $(NAME) $(OFILES) ./libft/*.o
+    ranlib $(NAME)
+
 clean:
-	/bin/rm -f $(OBJ)
+    make -C libft clean
+    /bin/rm -f $(OFILES)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+    /bin/rm -f $(NAME)
+    make -C libft fclean
 
 re: fclean all
