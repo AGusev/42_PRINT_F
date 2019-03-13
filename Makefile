@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/13 21:39:24 by agusev            #+#    #+#              #
-#    Updated: 2019/03/12 12:24:55 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/12 20:42:25 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS =    ft_printf.c \
                 src/
                 src/
 OFILES =    ft_printf.o \
-                   
+
 INCLUDES = -I fT_printf.h
 LIBFT_H = libft/libft.h
 LIBFT = libft/libft.a

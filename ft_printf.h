@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/12 12:20:21 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/12 12:59:45 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/12 20:42:31 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,13 @@
 # include <stdarg.h>
 
 int		ft_printf(const char *format, ...);
+typedef struct		t_num
+{
 
 
+char			*format;
 
+}					s_num;
 
 
 
