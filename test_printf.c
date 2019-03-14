@@ -6,13 +6,13 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:02 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/13 19:32:14 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/13 20:38:07 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+#include "src/test_printf.h"
 #include <stdio.h>
-#include "libft/libft.h"
+
 
 int        my_printf(const char *format, ...)
 {

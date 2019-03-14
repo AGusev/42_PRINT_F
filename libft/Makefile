@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/13 21:39:24 by agusev            #+#    #+#              #
-#    Updated: 2019/03/07 12:53:26 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/13 19:51:13 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,9 +51,9 @@ $(NAME): $(SRC) libft.h
 all: $(NAME)
 
 clean:
-	/bin/rm -f $(OBJ)
+    /bin/rm -f $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+    /bin/rm -f $(NAME)
 
 re: fclean all

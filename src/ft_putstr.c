@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_printf.h                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/13 17:59:57 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/13 19:27:32 by agusev           ###   ########.fr       */
+/*   Created: 2019/02/15 21:41:06 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/13 20:08:02 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_PRINTF_H
-# define TEST_PRINTF_H
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
+#include "test_printf.h"
 
-int         my_printf(const char *format, ...);
-int         counter1(int i, va_list arg, const char *s);
-int         counter2(int i, va_list arg, const char *s);
-int         counter3(int i, const char *s);
-int         counter(int i, va_list arg, const char *s);
+void	ft_putstr(char const *s)
+{
+	int i;
 
-#endif
+	i = 0;
+	if (s == '\0')
+		return ;
+	while (s[i] != '\0')
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+}
