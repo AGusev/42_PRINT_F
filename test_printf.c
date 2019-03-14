@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:02 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/13 20:38:07 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/13 21:27:13 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int        my_printf(const char *format, ...)
 	va_end(arg);
 	return (ret);
 }
-
+/*
 int		main(int ac, char *av[])
 {
 	int i;
@@ -59,4 +59,4 @@ int		main(int ac, char *av[])
 	//	printf("%d\n", ac);
 	while (++i <= ac)
 		printf("%s\n", av[i]);
-}
+}*/
