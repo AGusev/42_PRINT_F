@@ -6,13 +6,22 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/13 22:15:49 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/14 15:01:32 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libftprintf.a
 
-SRC=src/ft_putchar.c src/ft_abs.c src/ft_itoa_base.c src/ft_strlen.c src/counters.c test_printf.c
+SRC=src/ft_putchar.c \
+	src/ft_abs.c \
+	src/ft_itoa_base.c \
+	src/ft_strlen.c \
+	src/counters.c \
+	test_printf.c \
+	src/ft_strnew.c \
+	src/ft_strjoin.c \
+	src/ft+printf1.c \
+	src/ft_printf2.c
 OBJ=*.o
 
 INCL=./

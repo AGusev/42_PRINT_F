@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_printf1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 20:46:56 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/14 14:24:53 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/14 14:47:54 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/14 15:10:55 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_printf.h"
 
-size_t	ft_strlen(const char *s)
+int		ft_printf1(const char *s, int i)
 {
-	size_t i;
+	char	*tmp1;
+	char	*tmp2;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	tmp1 = (char *)malloc(sizeof(char) + 1);
+	tmp1[0] = *s;
+	tmp1[1] = '\0';
+	tmp2 = ft_strjoin(h_word, s);
+	if (s != NULL)
+		free(s);
+	s = ft_strjoin(h_word, s);
+	h_word = s;
+	free(tmp1);
 }

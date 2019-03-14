@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 20:46:56 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/14 14:24:53 by agusev           ###   ########.fr       */
+/*   Created: 2019/02/15 13:08:23 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/14 15:02:38 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_printf.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
+	char	*s;
+	size_t	i;
 
 	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (!s1 || !s2)
+		return (NULL);
+	s = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!s)
+		return (NULL);
+	while (*s1 != '\0')
+		s[i++] = *s1++;
+	while (*s2 != '\0')
+		s[i++] = *s2++;
+	s[i] = '\0';
+	return (s);
 }

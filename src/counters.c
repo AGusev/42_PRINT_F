@@ -6,16 +6,16 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 18:37:28 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/13 20:01:12 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/14 14:23:32 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_printf.h"
 
-int         counter(int i, va_list arg, const char *s)
+int			counter(int i, va_list arg, const char *s)
 {
-	char    *counter;
-	int     ret;
+	char	*counter;
+	int		ret;
 
 	ret = 0;
 	counter = " ";
@@ -38,10 +38,10 @@ int         counter(int i, va_list arg, const char *s)
 	return (ret);
 }
 
-int         counter1(int i, va_list arg, const char *s)
+int			counter1(int i, va_list arg, const char *s)
 {
-	char    *counter;
-	int     ret;
+	char	*counter;
+	int		ret;
 
 	ret = 0;
 	counter = " ";
@@ -61,10 +61,10 @@ int         counter1(int i, va_list arg, const char *s)
 	return (ret);
 }
 
-int         counter2(int i, va_list arg, const char *s)
+int			counter2(int i, va_list arg, const char *s)
 {
-	char    *counter;
-	int     ret;
+	char	*counter;
+	int		ret;
 
 	ret = 0;
 	counter = " ";
@@ -89,9 +89,9 @@ int         counter2(int i, va_list arg, const char *s)
 	return (ret);
 }
 
-int         counter3(int i, const char *s)
+int			counter3(int i, const char *s)
 {
-	int        ret;
+	int		ret;
 
 	ret = 0;
 	if (s[i] == '%')

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 20:46:56 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/14 14:24:53 by agusev           ###   ########.fr       */
+/*   Created: 2019/02/14 21:04:13 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/14 14:39:10 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test_printf.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strnew(size_t size)
 {
-	size_t i;
+	char *new;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	new = (char *)malloc(sizeof(char) * size + 1);
+	if (!new)
+		return (NULL);
+	new[size] = '\0';
+	while (size--)
+		new[size] = '\0';
+	return (new);
 }
