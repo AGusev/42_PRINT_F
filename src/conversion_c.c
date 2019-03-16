@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.c                                           :+:      :+:    :+:   */
+/*   conversion_c.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/07 12:52:44 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/13 20:36:56 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/15 20:48:33 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/15 20:48:36 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+#include "ft_printf.h"
 
-size_t	ft_abs(long long nb)
+char		*conversion_c(va_list *arg, int *length, t_flags *flags)
 {
-	if (nb < 0)
-		nb = -nb;
-	return (nb);
+	char	*str;
+	int		tmp;
+
+	tmp = va_arg(*arg, int);
+	if (tmp == '\0')
+	{
+		(*length)++;
+		flags->null_char = 1;
+		str = ft_strnew(1);
+	}
+	else
+		str = ft_bchar(1, (char)tmp);
+	return (str);
 }

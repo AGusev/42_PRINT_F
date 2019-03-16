@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putwstr_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 20:46:56 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/14 14:24:53 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/14 14:47:54 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/15 20:40:10 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putwstr_fd(wchar_t *s, int fd)
 {
-	size_t i;
+	int		i;
 
 	i = 0;
+	if (s == NULL)
+		return ;
 	while (s[i])
-		i++;
-	return (i);
+	{
+		ft_putwchar_fd(s[i], fd);
+		++i;
+	}
 }

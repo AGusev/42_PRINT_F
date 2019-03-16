@@ -1,15 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf2.c                                       :+:      :+:    :+:   */
+/*   adding_space.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/14 14:48:09 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:51:08 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/15 20:47:52 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/15 20:47:57 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+char		*adding_space(t_flags *flags, char *str)
+{
+	char	*tmp;
 
+	if (flags->conversion != 'd' && flags->conversion != 'i' && \
+			flags->conversion != 'D')
+	{
+		tmp = ft_strdup(str);
+		return (tmp);
+	}
+	tmp = ft_strnew(1);
+	if (flags->minus == 0)
+		tmp = ft_update(tmp, ft_strjoin(" ", str));
+	return (tmp);
+}

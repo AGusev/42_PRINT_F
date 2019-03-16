@@ -6,42 +6,42 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/14 15:01:32 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/15 20:45:42 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=libftprintf.a
+	NAME = libftprintf.a
+	SRCS = ./srcs/*.c
+	INCLUDES = -I ./includes
+	LIBFT = ./libft/libft.a
+	FLAGS = -Wall -Wextra -Werror
 
-SRC=src/ft_putchar.c \
-	src/ft_abs.c \
-	src/ft_itoa_base.c \
-	src/ft_strlen.c \
-	src/counters.c \
-	test_printf.c \
-	src/ft_strnew.c \
-	src/ft_strjoin.c \
-	src/ft+printf1.c \
-	src/ft_printf2.c
-OBJ=*.o
+	RESET = \033[0m
+	RED = \033[0;31m
+	GREEN = \033[0;32m
+	BLUE = \033[0;36m
 
-INCL=./
+	all: $(NAME)
 
-$(NAME): $(SRC) src/test_printf.h
-	@echo "\033[1;35mCompiling...$(NAME)\033[0m"
-	gcc -Wall -Wextra -Werror -I $(INCL) -c $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
-	@echo "\033[1;32m$(NAME) generated!\033[0m"
+	$(NAME):
+		@gcc $(FLAGS) $(SRCS) $(INCLUDES) -c -g
+		@echo "$(GREEN)Making objects files$(RESET)"
+		@make -C libft
+		@ar rc $(NAME) ./*.o ./libft/*.o
+		@ranlib $(NAME)
+		@echo "$(GREEN)Compiling libftprintf.a$(RESET)"
+		@echo "$(BLUE)Complete$(RESET)"
 
-all: $(NAME)
+	clean:
+		@/bin/rm -f ./*.o
+		@make -C libft clean
+		@echo "$(RED)Deleting objects for libftprintf.a$(RESET)"
+		@echo "$(BLUE)Complete$(RESET)"
 
-clean:
-	@echo "\033[1;31mCleaning...OBJ\033[0m"
-	/bin/rm -f $(OBJ)
+	fclean: clean
+		@/bin/rm -f $(NAME)
+		@echo "$(RED)Deleting libftprintf.a$(RESET)"
+		@make -C libft fclean
+		@echo "$(BLUE)Complete$(RESET)"
 
-fclean: clean
-	@echo "\033[1;31mCleaning...NAME\033[0m"
-	/bin/rm -f $(NAME)
-
-re: fclean all
-	@echo "\033[1;31mCleaning...ALL\033[0m"
+	re: fclean all

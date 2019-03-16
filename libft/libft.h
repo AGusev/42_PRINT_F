@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 16:26:46 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/07 13:10:20 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/15 20:34:19 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
@@ -67,7 +66,6 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
-char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
@@ -93,7 +91,17 @@ int					ft_str_is_lowercase(char *str);
 int					ft_str_is_uppercase(char *str);
 int					ft_isupper(int c);
 int					ft_islower(int c);
-char				*ft_itoa_base(long long value, int base);
 size_t				ft_abs(long long nb);
+char				*ft_bchar(int n, char c);
+void				ft_putwchar(wchar_t c);
+void				ft_putwstr_fd(wchar_t *s, int fd);
+char				*ft_strccrt(const char *str, char c);
+int					ft_atoi(const char *str);
+char				*ft_itoa(int n);
+char				*ft_itoa_base(long long value, int base);
+char				*ft_itoa_base_unsigned(uintmax_t value, int base);
+char				*ft_itoa_intmax(long long value);
+char				*ft_update(char *str, char *update);
+int					printing_string_wide(wchar_t *str);
 
 #endif

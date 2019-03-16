@@ -28,3 +28,11 @@ III Closing argument list to necessary clean-up
 4)
 va_end(arg);
 Finally, when we’re finished processing the all arguments, we call va_end(), which performs any necessary cleanup.
+
+Implemented conversions:  sSpdDioOuUxXcC%
+
+Conversion: b - turns number to binary.
+
+Implemented flags: #, 0, ' ', -, +, *, precision, and width
+
+Implemented casting flags: ll, hh, l, h, j, and z.

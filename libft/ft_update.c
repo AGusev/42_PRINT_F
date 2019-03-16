@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_update.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 21:37:32 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/13 20:07:55 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/15 20:40:39 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/15 20:40:42 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+#include "libft.h"
 
-void	ft_putchar(char c)
+char	*ft_update(char *str, char *update)
 {
-	write(1, &c, 1);
+	char *tmp;
+
+	tmp = update;
+	if (str != NULL)
+		free(str);
+	str = update;
+	return (str);
 }

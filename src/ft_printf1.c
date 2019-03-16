@@ -6,11 +6,11 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/14 14:47:54 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/14 15:10:55 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/15 20:50:52 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+#include "ft_printf.h"
 
 int		ft_printf1(const char *s, int i)
 {

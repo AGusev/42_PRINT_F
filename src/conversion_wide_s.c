@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   conversion_wide_s.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 13:08:23 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/14 15:02:38 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/15 20:49:37 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/15 20:49:43 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+#include "ft_printf.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char			*conversion_wide_s(va_list *arg)
 {
-	char	*s;
-	size_t	i;
+	wchar_t		*tmp_str;
+	char		*str;
 
-	i = 0;
-	if (!s1 || !s2)
-		return (NULL);
-	s = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!s)
-		return (NULL);
-	while (*s1 != '\0')
-		s[i++] = *s1++;
-	while (*s2 != '\0')
-		s[i++] = *s2++;
-	s[i] = '\0';
-	return (s);
+	tmp_str = va_arg(*arg, wchar_t *);
+	str = ft_wstrdup(tmp_str);
+	return (str);
 }

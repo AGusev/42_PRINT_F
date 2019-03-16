@@ -6,11 +6,11 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 18:37:28 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/14 14:23:32 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/15 20:50:25 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+#include "ft_printf.h"
 
 int			counter(int i, va_list arg, const char *s)
 {

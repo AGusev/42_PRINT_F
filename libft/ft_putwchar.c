@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_putwchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/14 21:04:13 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/14 14:39:10 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/14 14:47:54 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/15 20:40:06 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+##include "libft.h"
 
-char	*ft_strnew(size_t size)
+void	ft_putwchar(wchar_t c)
 {
-	char *new;
-
-	new = (char *)malloc(sizeof(char) * size + 1);
-	if (!new)
-		return (NULL);
-	new[size] = '\0';
-	while (size--)
-		new[size] = '\0';
-	return (new);
+	ft_putwchar_fd(c, 1);
 }

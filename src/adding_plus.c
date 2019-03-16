@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   adding_plus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/15 21:41:06 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/13 20:08:02 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/15 20:46:53 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/15 20:47:09 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+#include "ft_printf.h"
 
-void	ft_putstr(char const *s)
+char		*adding_plus(t_flags *flags, char *str)
 {
-	int i;
+	char	*tmp;
 
-	i = 0;
-	if (s == '\0')
-		return ;
-	while (s[i] != '\0')
+	if (flags->conversion != 'd' && flags->conversion != 'i' && \
+			flags->conversion != 'D')
 	{
-		write(1, &s[i], 1);
-		i++;
+		tmp = ft_strdup(str);
+		return (tmp);
 	}
+	tmp = ft_strnew(1);
+	if (flags->minus == 0)
+		tmp = ft_update(tmp, ft_strjoin("+", str));
+	return (tmp);
 }

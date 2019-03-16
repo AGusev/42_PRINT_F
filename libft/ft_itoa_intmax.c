@@ -1,54 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_itoa_intmax.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/07 12:49:20 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/13 20:07:48 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/14 22:35:20 by agusev	           #+#    #+#             */
+/*   Updated: 2019/03/15 20:39:42 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_printf.h"
+#include "libft.h"
 
-static char	*itoa_filler(char *tab, long long value, int base, int flag)
+static long long	ft_abs(long long nb)
 {
-	unsigned long long	tmp;
-	int					size;
-	char				*str;
+	if (nb < 0)
+		nb = -nb;
+	return (nb);
+}
+
+static char			*itoa_filler(char *tab, long long value, int flag)
+{
+	long long		tmp;
+	int				size;
+	char			*str;
 
 	size = 0;
 	tmp = ft_abs(value);
-	while (tmp /= base)
+	while (tmp /= 10)
 		size++;
 	size = size + flag + 1;
-	if ((str = (char *)malloc(sizeof(char) * size + 1)) == NULL)
+	str = (char *)malloc(sizeof(char) * size + 1);
+	if (str == NULL)
 		return (NULL);
 	str[size] = '\0';
 	if (flag == 1)
 		str[0] = '-';
 	while (size > flag)
 	{
-		str[size - 1] = tab[ft_abs(value % base)];
+		str[size - 1] = tab[ft_abs(value % 10)];
 		size--;
-		value = value / base;
+		value = value / 10;
 	}
 	return (str);
 }
 
-char		*ft_itoa_base(long long value, int base)
+char				*ft_itoa_intmax(long long value)
 {
-	char	*str;
-	char	*tab;
-	int		flag;
+	char			*str;
+	char			*tab;
+	int				flag;
 
 	flag = 0;
 	tab = "0123456789abcdef";
-	if (base < 2 || base > 16)
-		return (str = "ERROR");
-	if (value < 0 && base == 10)
+	if (value < 0)
 		flag = 1;
-	str = itoa_filler(tab, value, base, flag);
+	str = itoa_filler(tab, value, flag);
 	return (str);
 }
