@@ -6,11 +6,11 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:48:13 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:48:17 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 22:06:33 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char		*adding_width_null_char(t_flags *flags, char *answer, \
 		int *length, char **str)

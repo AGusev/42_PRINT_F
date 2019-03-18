@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:57 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 20:49:36 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 22:14:46 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <wchar.h>
-#include "../libft/libft.h"
+#include "libft/libft.h"
 
-typedef struct	s_list
+typedef struct	s_flags
 {
 	int			minus;
 	int			plus;
@@ -34,7 +34,7 @@ typedef struct	s_list
 	int			float_conv;
 	char		conversion;
 	char		*format;
-}				t_list;
+}				t_flags;
 
 int				ft_printf(const char *format, ...);
 int				counter1(int i, va_list arg, const char *s);
@@ -43,8 +43,6 @@ int				counter3(int i, const char *s);
 int				counter(int i, va_list arg, const char *s);
 int				ft_printf1();
 int				ft_printf2();
-int				handle_float(va_list list, t_arg *arg);
-
 char			*conversions(t_flags *flags, va_list *arg, int *length, char **str);
 char			*conversions_extra(t_flags *flags, va_list *arg, char *answer);
 char			*apply_flags(char *answer, t_flags *flags, int *length, char **str);

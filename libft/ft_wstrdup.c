@@ -1,15 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf2.c                                       :+:      :+:    :+:   */
+/*   ft_wstrdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/14 14:48:09 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:51:08 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/17 22:27:03 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/17 22:27:14 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
+char	*ft_wstrdup(wchar_t *s1)
+{
+	int		i;
+	char	*s2;
 
+	s2 = (char *)malloc(sizeof(char) * (ft_wstrlen(s1) + 1));
+	if (s2 == NULL)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		s2[i] = (char)s1[i];
+		++i;
+	}
+	s2[i] = '\0';
+	return (s2);
+}

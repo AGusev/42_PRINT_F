@@ -6,13 +6,13 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:51:31 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:51:36 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 22:11:09 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+//#include "../ft_printf.h"
 
-void	prepare_float(int *sign, long double *n, t_arg *f)
+void	prepare_float(int *sign, long double *n, t_flags *f)
 {
 	long double	pi;
 	int			i;
@@ -31,7 +31,7 @@ void	prepare_float(int *sign, long double *n, t_arg *f)
 	*n += pi;
 }
 
-char	*ft_ftoa(long double n, t_arg *f)
+char	*ft_ftoa(long double n, t_flags *f)
 {
 	int		len;
 	char	*dst;
@@ -59,7 +59,7 @@ char	*ft_ftoa(long double n, t_arg *f)
 	return (dst);
 }
 
-int		handle_float(va_list list, t_arg *arg)
+int		handle_float(va_list list, t_flags *arg)
 {
 	double	n;
 	char	*str;

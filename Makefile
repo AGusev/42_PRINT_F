@@ -6,42 +6,91 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/15 21:23:09 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/17 22:34:24 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-	NAME = libftprintf.a
-	SRCS = ./srcs/*.c
-	INCLUDES = -I ./includes
-	LIBFT = ./libft/libft.a
-	FLAGS = -Wall -Wextra -Werror
+NAME = libftprintf.a
+SRCS =	ft_printf.c \
+		srcs/adding_minus.c \
+		srcs/adding_precision_string.c \
+		srcs/adding_width_null_char.c \
+		srcs/conversion_d_i.c \
+		srcs/conversion_u_cap_d_cap_u.c \
+		srcs/handle_width.c \
+		srcs/adding_plus.c \
+		srcs/adding_space.c \
+		srcs/conversion_b.c \
+		srcs/conversion_p.c \
+		srcs/conversion_wide_c.c \
+		srcs/conversions.c \
+		srcs/handle_format.c \
+		srcs/parse_flags.c \
+		srcs/adding_precision_number.c \
+		srcs/adding_width.c \
+		srcs/conversion_c.c \
+		srcs/conversion_s.c \
+		srcs/conversion_wide_s.c \
+		srcs/counters.c \
+		srcs/handle_flags.c \
+		srcs/handle_precision.c
 
-	RESET = \033[0m
-	RED = \033[0;31m
-	GREEN = \033[0;32m
-	BLUE = \033[0;36m
+OFILES =ft_printf.o \
+		adding_minus.o \
+		adding_precision_string.o \
+		adding_width_null_char.o \
+		conversion_d_i.o \
+		conversion_u_cap_d_cap_u.o \
+		handle_width.o \
+		adding_plus.o \
+		adding_space.o \
+		conversion_b.o \
+		conversion_p.o \
+		conversion_wide_c.o \
+		conversions.o \
+		handle_format.o \
+		parse_flags.o \
+		adding_precision_number.o \
+		adding_width.o \
+		conversion_c.o \
+		conversion_s.o \
+		conversion_wide_s.o \
+		counters.o \
+		handle_flags.o \
+		handle_precision.o
 
-	all: $(NAME)
+INCLUDES = -I ft_printf.h
+LIBFT_H = libft/libft.h
+LIBFT = libft/libft.a
+FLAGS = -Wall -Wextra -Werror
 
-	$(NAME):
-		@gcc $(FLAGS) $(SRCS) $(INCLUDES) -c -g
-		@echo "$(GREEN)Making objects files$(RESET)"
-		@make -C libft
-		@ar rc $(NAME) ./*.o ./libft/*.o
-		@ranlib $(NAME)
-		@echo "$(GREEN)Compiling libftprintf.a$(RESET)"
-		@echo "$(BLUE)Complete$(RESET)"
+RESET = \033[0m
+RED = \033[1;31m
+GREEN = \033[1;32m
+BLUE = \033[1;36m
 
-	clean:
-		@/bin/rm -f ./*.o
-		@make -C libft clean
-		@echo "$(RED)Deleting objects for libftprintf.a$(RESET)"
-		@echo "$(BLUE)Complete$(RESET)"
+all: $(NAME)
 
-	fclean: clean
-		@/bin/rm -f $(NAME)
-		@echo "$(RED)Deleting libftprintf.a$(RESET)"
-		@make -C libft fclean
-		@echo "$(BLUE)Complete$(RESET)"
+$(NAME):
+	@echo "$(GREEN)Compiling libft.a$(RESET)"
+	make -C libft
+	gcc $(FLAGS) $(INCLUDES) -c $(SRCS)
+	@echo "$(GREEN)Making objects files$(RESET)"
+	ar rc $(NAME) $(OFILES) ./libft/*.o
+	ranlib $(NAME)
+	@echo "$(GREEN)Compiling libftprintf.a$(RESET)"
+	@echo "$(BLUE)Complete$(RESET)"
 
-	re: fclean all
+clean:
+	make -C libft clean
+	/bin/rm -f $(OFILES)
+	@echo "$(RED)Deleting objects for libftprintf.a$(RESET)"
+	@echo "$(BLUE)Complete$(RESET)"
+
+fclean: clean
+	/bin/rm -f $(NAME)
+	@echo "$(RED)Deleting libftprintf.a$(RESET)"
+	make -C libft fclean
+	@echo "$(BLUE)Complete$(RESET)"
+
+re: fclean all

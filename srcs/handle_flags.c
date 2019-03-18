@@ -6,11 +6,11 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:51:15 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:51:21 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 22:07:53 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char		*handling_flags(char **format, t_flags *flags)
 {

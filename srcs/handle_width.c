@@ -6,11 +6,11 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:52:00 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:52:04 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 22:11:32 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 void		ft_star_width(int *star_width, va_list *arg, t_flags *flags)
 {
@@ -40,7 +40,7 @@ char		*handling_width(char **format, t_flags *flags, va_list *arg)
 		if (ft_isdigit(**format))
 		{
 			star_width = -1;
-			flags->width = (flags->width * 10) + ()**format - 48);
+			flags->width = (flags->width * 10) + (**format - 48);
 		}
 		(*format)++;
 	}

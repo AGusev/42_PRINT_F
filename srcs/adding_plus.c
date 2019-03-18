@@ -6,11 +6,11 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:46:53 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:47:09 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 22:06:18 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char		*adding_plus(t_flags *flags, char *str)
 {

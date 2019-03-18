@@ -6,11 +6,11 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:50:16 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:57:32 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 22:08:37 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char		*apply_flags(char *answer, t_flags *flags, int *length, char **str)
 {
@@ -44,7 +44,7 @@ char		*conversions_extra(t_flags *flags, va_list *arg, char *answer)
 	if (flags->conversion == 'b')
 		answer = ft_update(answer, conversion_b(arg, flags));
 	if (flags->conversion == '%')
-	ss	answer = ft_update(answer, ft_bchar(1, '%'));
+		answer = ft_update(answer, ft_bchar(1, '%'));
 	return (answer);
 }
 

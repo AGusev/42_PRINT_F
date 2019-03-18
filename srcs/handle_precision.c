@@ -6,11 +6,11 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:51:52 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:51:56 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 22:09:44 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 void		ft_star_precision(int *star_precision, va_list *arg, \
 								t_flags *flags)
