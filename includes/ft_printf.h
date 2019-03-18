@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:57 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:50:47 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 20:49:36 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <wchar.h>
-#include "../libft/linft.h"
+#include "../libft/libft.h"
 
 typedef struct	s_list
 {

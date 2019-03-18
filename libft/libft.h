@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 16:26:46 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/15 20:34:19 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 21:12:55 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ int					ft_islower(int c);
 size_t				ft_abs(long long nb);
 char				*ft_bchar(int n, char c);
 void				ft_putwchar(wchar_t c);
+void				ft_putwchar_fd(wchar_t c, int fd);
 void				ft_putwstr_fd(wchar_t *s, int fd);
 char				*ft_strccrt(const char *str, char c);
 int					ft_atoi(const char *str);

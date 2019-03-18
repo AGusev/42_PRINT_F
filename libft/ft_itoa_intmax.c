@@ -6,18 +6,11 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/14 22:35:20 by agusev	           #+#    #+#             */
-/*   Updated: 2019/03/15 20:39:42 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/17 20:50:59 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static long long	ft_abs(long long nb)
-{
-	if (nb < 0)
-		nb = -nb;
-	return (nb);
-}
 
 static char			*itoa_filler(char *tab, long long value, int flag)
 {
