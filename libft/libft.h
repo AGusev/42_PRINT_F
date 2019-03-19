@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 16:26:46 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 22:39:11 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/18 21:13:18 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ char				*ft_itoa_base_unsigned(uintmax_t value, int base);
 char				*ft_itoa_unsigned(uintmax_t value);
 char				*ft_itoa_intmax(long long value);
 char				*ft_update(char *str, char *update);
-int					printing_string_wide(wchar_t *str);
+int					ft_printing_string_wide(wchar_t *str);
 char				*ft_wstrdup(wchar_t *s1);
 int					ft_wstrlen(wchar_t *str);
 

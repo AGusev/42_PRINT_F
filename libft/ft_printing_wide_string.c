@@ -6,13 +6,13 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/14 22:35:20 by agusev	           #+#    #+#             */
-/*   Updated: 2019/03/17 21:12:12 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/18 21:13:07 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			printing_string_wide(wchar_t *str)
+int			ft_printing_string_wide(wchar_t *str)
 {
 	int		i;
 

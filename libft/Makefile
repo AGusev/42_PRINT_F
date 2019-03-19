@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/13 21:39:24 by agusev            #+#    #+#              #
-#    Updated: 2019/03/17 22:31:08 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/18 21:13:56 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ ft_bzero.c ft_lstiter.c ft_putchar.c ft_strcmp.c ft_strmap.c ft_strsub.c \
 ft_isalnum.c ft_lstmap.c ft_putchar_fd.c ft_strcpy.c ft_strmapi.c \
 ft_isalpha.c ft_lstnew.c ft_putendl.c ft_strdel.c ft_strncat.c ft_strtoupper.c \
 ft_isascii.c ft_memalloc.c ft_putendl_fd.c ft_strdup.c ft_strncmp.c \
-ft_strtrim.c ft_strtolower.c ft_toupper.c ft_update.c printing_wide_string.c \
+ft_strtrim.c ft_strtolower.c ft_toupper.c ft_update.c ft_printing_wide_string.c \
 ft_isdigit.c ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strncpy.c ft_tolower.c \
 ft_isprint.c ft_memchr.c ft_putnbr_fd.c ft_str_is_lowercase.c ft_strnequ.c \
 ft_iswhitespace.c ft_memcmp.c ft_putstr.c ft_str_is_uppercase.c ft_strnew.c \
@@ -37,7 +37,7 @@ ft_bzero.o ft_lstiter.o ft_putchar.o ft_strcmp.o ft_strmap.o ft_strsub.o \
 ft_isalnum.o ft_lstmap.o ft_putchar_fd.o ft_strcpy.o ft_strmapi.o \
 ft_isalpha.o ft_lstnew.o ft_putendl.o ft_strdel.o ft_strncat.o ft_strtoupper.o \
 ft_isascii.o ft_memalloc.o ft_putendl_fd.o ft_strdup.o ft_strncmp.o \
-ft_strtrim.o ft_strtolower.o ft_toupper.o ft_update.o printing_wide_string.o \
+ft_strtrim.o ft_strtolower.o ft_toupper.o ft_update.o ft_printing_wide_string.o \
 ft_isdigit.o ft_memccpy.o ft_putnbr.o ft_strequ.o ft_strncpy.o ft_tolower.o \
 ft_isprint.o ft_memchr.o ft_putnbr_fd.o ft_str_is_lowercase.o ft_strnequ.o \
 ft_iswhitespace.o ft_memcmp.o ft_putstr.o ft_str_is_uppercase.o ft_strnew.o \

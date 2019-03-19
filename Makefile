@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/17 22:34:24 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/18 20:31:14 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,25 +72,25 @@ BLUE = \033[1;36m
 all: $(NAME)
 
 $(NAME):
-	@echo "$(GREEN)Compiling libft.a$(RESET)"
+	@echo "$(GREEN)GENERATING libft.a$(RESET)"
 	make -C libft
 	gcc $(FLAGS) $(INCLUDES) -c $(SRCS)
-	@echo "$(GREEN)Making objects files$(RESET)"
+	@echo "$(GREEN)GENERATING objects files$(RESET)"
 	ar rc $(NAME) $(OFILES) ./libft/*.o
 	ranlib $(NAME)
-	@echo "$(GREEN)Compiling libftprintf.a$(RESET)"
-	@echo "$(BLUE)Complete$(RESET)"
+	@echo "$(GREEN)COMPILING libftprintf.a$(RESET)"
+	@echo "$(BLUE)COMPLETED$(RESET)"
 
 clean:
 	make -C libft clean
 	/bin/rm -f $(OFILES)
-	@echo "$(RED)Deleting objects for libftprintf.a$(RESET)"
-	@echo "$(BLUE)Complete$(RESET)"
+	@echo "$(RED)DELETING objects libftprintf.a$(RESET)"
+	@echo "$(BLUE)COMPLETED$(RESET)"
 
 fclean: clean
 	/bin/rm -f $(NAME)
-	@echo "$(RED)Deleting libftprintf.a$(RESET)"
+	@echo "$(RED)DELETING libftprintf.a$(RESET)"
 	make -C libft fclean
-	@echo "$(BLUE)Complete$(RESET)"
+	@echo "$(BLUE)COMPLETEDs$(RESET)"
 
 re: fclean all
