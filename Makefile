@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/18 20:31:14 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/19 18:42:25 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ SRCS =	ft_printf.c \
 		srcs/adding_width_null_char.c \
 		srcs/conversion_d_i.c \
 		srcs/conversion_u_cap_d_cap_u.c \
+		srcs/conversion_o_cap_o.c \
+		srcs/conversion_x_cap_x.c \
 		srcs/handle_width.c \
 		srcs/adding_plus.c \
 		srcs/adding_space.c \
@@ -33,7 +35,8 @@ SRCS =	ft_printf.c \
 		srcs/conversion_wide_s.c \
 		srcs/counters.c \
 		srcs/handle_flags.c \
-		srcs/handle_precision.c
+		srcs/handle_precision.c \
+		srcs/concersion_float.c
 
 OFILES =ft_printf.o \
 		adding_minus.o \
@@ -41,6 +44,8 @@ OFILES =ft_printf.o \
 		adding_width_null_char.o \
 		conversion_d_i.o \
 		conversion_u_cap_d_cap_u.o \
+		conversion_o_cap_o.o \
+		conversion_x_cap_x.o \
 		handle_width.o \
 		adding_plus.o \
 		adding_space.o \
@@ -57,7 +62,8 @@ OFILES =ft_printf.o \
 		conversion_wide_s.o \
 		counters.o \
 		handle_flags.o \
-		handle_precision.o
+		handle_precision.o \
+		concersion_float.o
 
 INCLUDES = -I ft_printf.h
 LIBFT_H = libft/libft.h
@@ -68,6 +74,7 @@ RESET = \033[0m
 RED = \033[1;31m
 GREEN = \033[1;32m
 BLUE = \033[1;36m
+YELLOW = \033[1;33m
 
 all: $(NAME)
 
@@ -75,11 +82,15 @@ $(NAME):
 	@echo "$(GREEN)GENERATING libft.a$(RESET)"
 	make -C libft
 	gcc $(FLAGS) $(INCLUDES) -c $(SRCS)
-	@echo "$(GREEN)GENERATING objects files$(RESET)"
+	@echo "$(GREEN)GENERATING OFILES$(RESET)"
 	ar rc $(NAME) $(OFILES) ./libft/*.o
 	ranlib $(NAME)
 	@echo "$(GREEN)COMPILING libftprintf.a$(RESET)"
 	@echo "$(BLUE)COMPLETED$(RESET)"
+
+main:
+	@echo "$(YELLOW)PRINTING TEST$(RESET)"
+	@gcc $(FLAGS) $(NAME) $(INCLUDES) $(LIBFT) main.c
 
 clean:
 	make -C libft clean
@@ -91,6 +102,6 @@ fclean: clean
 	/bin/rm -f $(NAME)
 	@echo "$(RED)DELETING libftprintf.a$(RESET)"
 	make -C libft fclean
-	@echo "$(BLUE)COMPLETEDs$(RESET)"
+	@echo "$(BLUE)COMPLETED$(RESET)"
 
 re: fclean all

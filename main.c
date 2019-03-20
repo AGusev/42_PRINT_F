@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 20:35:40 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/18 21:11:08 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/19 18:38:44 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int				main(void)
 {
-	
+
 // number of char
 
 	int		a;
@@ -94,10 +94,17 @@ int				main(void)
 	printf("p - float #7 - %+20.2f\n", 93847587871.123);
 	ft_printf("f - float #8 - % 20.2f\n", 93847587871.123);
 	printf("p - float #8 - % 20.2f\n\n", 93847587871.123);
-	printf("BONUS PART FLAG b\n");
-	ft_printf("%b\n", 128);
 	
-	while (1);
+	printf("BONUS PART FLAG b\n\n");
+	ft_printf("%b\n",44);
+	ft_printf("%b\n",128);
+	ft_printf("%b\n",64);
+	ft_printf("%b\n",32);
+	ft_printf("%b\n",16);
+	ft_printf("%b\n",8);
+	ft_printf("%b\n",4);
+	ft_printf("%b\n",2);
+	ft_printf("%b\n",1);
 
 	return (0);
 }

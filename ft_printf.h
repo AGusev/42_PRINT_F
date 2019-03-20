@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:57 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/18 20:28:48 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/19 18:41:25 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct	s_flags
 	int			precision;
 	int			precision_exist;
 	int			null_char;
-	int			float_conv;
+	int			float_f;
 	char		conversion;
 	char		*format;
 }				t_flags;
@@ -64,6 +64,7 @@ char			*conversion_d_i(va_list *arg, t_flags *flags);
 char			*conversion_o_cap_o(va_list *arg, t_flags *flags);
 char			*conversion_x_cap_x(va_list *arg, t_flags *flags);
 char			*conversion_u_cap_d_cap_u(va_list *arg, t_flags *flags);
+char			*conversion_float(va_list *arg, t_flags *flags);
 char			*adding_width(t_flags *flags, char *str);
 int				adding_width_wide(t_flags *flags, int length_str);
 char			*adding_width_null_char(t_flags *flags, char *answer, \
