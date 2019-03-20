@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/19 18:33:42 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/19 18:41:33 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/19 18:46:11 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,16 @@
 
 char		*conversion_float(va_list *arg, t_flags *flags)
 {
+    char	*str;
+	int		tmp;
 
 
 
+
+
+
+
+
+
+    return(str);
 }
