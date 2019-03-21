@@ -6,12 +6,12 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/19 18:33:42 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/19 22:16:40 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/21 14:47:34 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-
+/*
 char		*ft_ftoa(float num)
 {
 	short	i;
@@ -39,7 +39,7 @@ char		*ft_ftoa(float num)
 	(i++ == 3) ? str[size--] = '0' : 1;
 	(size == 0) ? str[0] = '-' : 1;
 	return (str);
-}
+}*/
 /*
 char		*ft_dtoa(double num, short i, short size)
 {
@@ -71,10 +71,13 @@ char		*ft_dtoa(double num, short i, short size)
 
 char			*conversion_float(va_list *arg, t_flags *flags)
 {
-    char		*answer;
-	intmax_t	tmp;
+	char		*answer;
+//	intmax_t	tmp;
+	long double	tmp;
 
-	tmp = va_arg(*arg, uintmax_t);
+	tmp = va_arg(*arg, long double);
+
+/*	tmp = va_arg(*arg, uintmax_t);
 	if (!ft_strcmp(flags->format, "ll"))
 		tmp = (unsigned long long int)tmp;
 	else if (!ft_strcmp(flags->format, "l"))
@@ -88,9 +91,9 @@ char			*conversion_float(va_list *arg, t_flags *flags)
 	else if (!ft_strcmp(flags->format, "z"))
 		tmp = (size_t)tmp;
 	else
-		tmp = (unsigned int)tmp;
-	
-	answer = ft_ftoa(tmp, 8);
+		tmp = (unsigned int)tmp;*/
+	tmp = (long double)tmp;
+	answer = ft_ftoa(tmp);
 	if (flags->hashtag == 1 && tmp != 0)
 		answer = ft_update(answer, ft_strjoin("0", answer));
 	return (answer);

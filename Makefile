@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/19 22:02:40 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/21 14:48:58 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ SRCS =	ft_printf.c \
 		srcs/counters.c \
 		srcs/handle_flags.c \
 		srcs/handle_precision.c \
-		srcs/conversion_float.c
+		srcs/conversion_float.c \
+		srcs/ft_ftoa.c
 
 OFILES =ft_printf.o \
 		adding_minus.o \
@@ -63,7 +64,8 @@ OFILES =ft_printf.o \
 		counters.o \
 		handle_flags.o \
 		handle_precision.o \
-		conversion_float.o
+		conversion_float.o \
+		ft_ftoa.o
 
 INCLUDES = -I ft_printf.h
 LIBFT_H = libft/libft.h
@@ -91,6 +93,12 @@ $(NAME):
 main:
 	@echo "$(YELLOW)PRINTING TEST$(RESET)"
 	@gcc $(FLAGS) $(NAME) $(INCLUDES) $(LIBFT) main.c
+
+mclan :
+	/bin/rm -f $(MAIN)
+	@echo "$(RED)DELETING libftprintf.a$(RESET)"
+	make -C libft fclean
+	@echo "$(BLUE)COMPLETED$(RESET)"
 
 clean:
 	make -C libft clean

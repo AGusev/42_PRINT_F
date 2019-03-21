@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:57 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/19 18:41:25 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/21 13:16:14 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,6 @@ char			*adding_precision_string(t_flags *flags, char *str);
 char			*adding_precision_number(t_flags *flags, char *str);
 int				final_print(const char *format, char *str);
 int				narrow_ft_printf(const char *format, va_list *arg, char *str);
+char			*ft_ftoa(long double f);
 
 #endif
