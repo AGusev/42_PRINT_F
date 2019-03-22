@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:57 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/21 13:16:14 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/21 23:19:07 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ typedef struct	s_flags
 	int			precision_exist;
 	int			null_char;
 	int			float_f;
+	int			float2;
+	int			float3;
+	int			length;
 	char		conversion;
 	char		*format;
 }				t_flags;
@@ -64,7 +67,6 @@ char			*conversion_d_i(va_list *arg, t_flags *flags);
 char			*conversion_o_cap_o(va_list *arg, t_flags *flags);
 char			*conversion_x_cap_x(va_list *arg, t_flags *flags);
 char			*conversion_u_cap_d_cap_u(va_list *arg, t_flags *flags);
-char			*conversion_float(va_list *arg, t_flags *flags);
 char			*adding_width(t_flags *flags, char *str);
 int				adding_width_wide(t_flags *flags, int length_str);
 char			*adding_width_null_char(t_flags *flags, char *answer, \
@@ -76,6 +78,8 @@ char			*adding_precision_string(t_flags *flags, char *str);
 char			*adding_precision_number(t_flags *flags, char *str);
 int				final_print(const char *format, char *str);
 int				narrow_ft_printf(const char *format, va_list *arg, char *str);
-char			*ft_ftoa(long double f);
+char			*ft_ftoa(long double n, t_flags *f);
+char			*handle_float(va_list *arg, t_flags *f);
+char			*ft_ftoa1(long double f);
 
 #endif

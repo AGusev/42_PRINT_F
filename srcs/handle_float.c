@@ -6,32 +6,33 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:51:31 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 22:11:09 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/21 23:16:13 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "../ft_printf.h"
+#include "../ft_printf.h"
 
-void	prepare_float(int *sign, long double *n, t_flags *f)
+
+void	prepare_float(int *sign, long double *n, t_flags *flags)
 {
-	long double	pi;
+	long double	r;
 	int			i;
 
 	i = 0;
-	pi = 0.5;
+	r = 0.5;
 	*sign = 0;
 	if (*n < 0)
 	{
 		*n = -(*n);
 		*sign = 1;
 	}
-	f->pre_nb = (f->pre_nb != 0) ? f->pre_nb : 6;
-	while (f->pre_nb >= 0 && i++ < f->pre_nb)
-		pi /= 10;
-	*n += pi;
+	flags->float2 = (flags->float2 != 0) ? flags->float2 : 6;
+	while (flags->float2 >= 0 && i++ < flags->float2)
+		r /= 10;
+	*n += r;
 }
 
-char	*ft_ftoa(long double n, t_flags *f)
+char	*ft_ftoa(long double n, t_flags *flags)
 {
 	int		len;
 	char	*dst;
@@ -39,37 +40,40 @@ char	*ft_ftoa(long double n, t_flags *f)
 	int		sign;
 	int		pos;
 
-	prepare_float(&sign, &n, f);
+	prepare_float(&sign, &n, flags);
 	dec = ft_itoa((long long int)n);
 	len = ft_strlen(dec);
-	dst = ft_strnew(sign + len + 1 + ((f->pre_nb > 0) ? f->pre_nb : 0));
+	dst = ft_strnew(sign + len + 1 + ((flags->float2 > 0) ? flags->float2 : 0));
 	pos = sign;
 	ft_strcpy(dst + pos, dec);
 	pos += len;
-	if (f->pre_nb > 0)
+	if (flags->float2 > 0)
 		dst[pos++] = '.';
-	while (pos <= len + sign + ((f->pre_nb > 0) ? f->pre_nb : 1))
+	while (pos <= len + sign + ((flags->float2 > 0) ? flags->float2 : 1))
 	{
 		dst[pos++] = ((unsigned long long int)(n * 10) % 10) + '0';
 		n *= 10;
 	}
 	if (sign)
 		dst[0] = '-';
-	f->print_count = pos;
+	flags->float3 = pos;
 	return (dst);
 }
 
-int		handle_float(va_list list, t_flags *arg)
+char		*handle_float(va_list *arg, t_flags *f)
 {
-	double	n;
-	char	*str;
+	double	tmp;
+	char	*answer;
 
-	if (arg->length == ll)
-		n = (long double)va_arg(list, long double);
+	answer = NULL;
+	tmp = va_arg(*arg, long double);
+	if (!ft_strcmp(f->format, "l"))
+		tmp = (double)tmp;
+	else if (!ft_strcmp(f->format, "ll"))
+		tmp = (long double)tmp;
 	else
-		n = (double)va_arg(list, double);
-	str = NULL;
-	str = ft_itoa(n, arg);
-	ft_putstr(str);
-	return (arg->print_count);
+		tmp = (long double)tmp;
+	answer = ft_update(answer, ft_ftoa(tmp, f));
+	ft_putstr(answer);
+	return (answer);
 }

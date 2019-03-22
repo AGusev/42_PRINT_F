@@ -6,13 +6,14 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/19 18:33:42 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/21 14:47:34 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/21 23:17:09 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
-/*
-char		*ft_ftoa(float num)
+//#include "../ft_printf.h"
+#include <math.h>
+
+char		*ft_ftoa2(double num)
 {
 	short	i;
 	int		tmp;
@@ -39,8 +40,8 @@ char		*ft_ftoa(float num)
 	(i++ == 3) ? str[size--] = '0' : 1;
 	(size == 0) ? str[0] = '-' : 1;
 	return (str);
-}*/
-/*
+}
+
 char		*ft_dtoa(double num, short i, short size)
 {
 	int		tmp;
@@ -67,22 +68,21 @@ char		*ft_dtoa(double num, short i, short size)
 	(size == 0) ? str[0] = '-' : 1;
 	return (str);
 }
-*/
+
 
 char			*conversion_float(va_list *arg, t_flags *flags)
 {
 	char		*answer;
 //	intmax_t	tmp;
-	long double	tmp;
+	double	tmp;
 
-	tmp = va_arg(*arg, long double);
-
-/*	tmp = va_arg(*arg, uintmax_t);
+	tmp = va_arg(*arg, double);
+//	tmp = va_arg(*arg, uintmax_t);
 	if (!ft_strcmp(flags->format, "ll"))
-		tmp = (unsigned long long int)tmp;
+		tmp = (long double)tmp;
 	else if (!ft_strcmp(flags->format, "l"))
-		tmp = (unsigned long int)tmp;
-	else if (!ft_strcmp(flags->format, "hh"))
+		tmp = (double)tmp;
+/*	else if (!ft_strcmp(flags->format, "hh"))
 		tmp = (unsigned char)tmp;
 	else if (!ft_strcmp(flags->format, "h"))
 		tmp = (unsigned short int)tmp;
@@ -90,10 +90,11 @@ char			*conversion_float(va_list *arg, t_flags *flags)
 		tmp = (uintmax_t)tmp;
 	else if (!ft_strcmp(flags->format, "z"))
 		tmp = (size_t)tmp;
+		*/
 	else
-		tmp = (unsigned int)tmp;*/
-	tmp = (long double)tmp;
-	answer = ft_ftoa(tmp);
+		tmp = (long double)tmp;
+//	tmp = (long double)tmp;
+	answer = ft_ftoa2(tmp);
 	if (flags->hashtag == 1 && tmp != 0)
 		answer = ft_update(answer, ft_strjoin("0", answer));
 	return (answer);

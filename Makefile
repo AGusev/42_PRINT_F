@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/21 14:48:58 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/21 23:21:15 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,8 @@ SRCS =	ft_printf.c \
 		srcs/counters.c \
 		srcs/handle_flags.c \
 		srcs/handle_precision.c \
-		srcs/conversion_float.c \
-		srcs/ft_ftoa.c
+		srcs/ft_ftoa.c \
+		srcs/handle_float.c
 
 OFILES =ft_printf.o \
 		adding_minus.o \
@@ -64,8 +64,8 @@ OFILES =ft_printf.o \
 		counters.o \
 		handle_flags.o \
 		handle_precision.o \
-		conversion_float.o \
-		ft_ftoa.o
+		ft_ftoa.o \
+		handle_float.o
 
 INCLUDES = -I ft_printf.h
 LIBFT_H = libft/libft.h
@@ -90,15 +90,13 @@ $(NAME):
 	@echo "$(GREEN)COMPILING libftprintf.a$(RESET)"
 	@echo "$(BLUE)COMPLETED$(RESET)"
 
-main:
+ma:
 	@echo "$(YELLOW)PRINTING TEST$(RESET)"
 	@gcc $(FLAGS) $(NAME) $(INCLUDES) $(LIBFT) main.c
 
-mclan :
-	/bin/rm -f $(MAIN)
-	@echo "$(RED)DELETING libftprintf.a$(RESET)"
-	make -C libft fclean
-	@echo "$(BLUE)COMPLETED$(RESET)"
+mclean :
+	/bin/rm -f a.out
+	@echo "$(RED)DELETING a.out$(RESET)"
 
 clean:
 	make -C libft clean
@@ -113,3 +111,29 @@ fclean: clean
 	@echo "$(BLUE)COMPLETED$(RESET)"
 
 re: fclean all
+
+fmain: clean
+	/bin/rm -f $(NAME)
+	@echo "$(RED)DELETING libftprintf.a$(RESET)"
+	make -C libft fclean
+	@echo "$(BLUE)COMPLETED$(RESET)"
+	/bin/rm -f a.out
+	@echo "$(RED)DELETING a.out$(RESET)"
+
+output:
+	@echo "$(GREEN)GENERATING libft.a$(RESET)"
+	make -C libft
+	gcc $(FLAGS) $(INCLUDES) -c $(SRCS)
+	@echo "$(GREEN)GENERATING OFILES$(RESET)"
+	ar rc $(NAME) $(OFILES) ./libft/*.o
+	ranlib $(NAME)
+	@echo "$(GREEN)COMPILING libftprintf.a$(RESET)"
+	@echo "$(BLUE)COMPLETED$(RESET)"
+	@echo "$(YELLOW)PRINTING TEST$(RESET)"
+	@gcc $(FLAGS) $(NAME) $(INCLUDES) $(LIBFT) main.c
+	./a.out
+
+main: fclean
+	make mclean
+	make output
+

@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 13:06:37 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/21 13:25:56 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/21 23:10:36 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,7 +193,7 @@ char			*ft_fpreci(char *s, int preci)
 	return (new);
 }
 
-char			*ft_ftoa(long double f)
+char			*ft_ftoa1(long double f)
 {
 	long long	a;
 	long long	b;
