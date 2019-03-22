@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:51:31 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/21 23:16:13 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/22 00:44:03 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char		*handle_float(va_list *arg, t_flags *f)
 		tmp = (long double)tmp;
 	else
 		tmp = (long double)tmp;
-	answer = ft_update(answer, ft_ftoa(tmp, f));
+	answer = ft_update(answer, ft_ftoa4(tmp));
 	ft_putstr(answer);
 	return (answer);
 }

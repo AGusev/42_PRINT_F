@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:57 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/21 23:19:07 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/22 00:43:38 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,6 @@ int				narrow_ft_printf(const char *format, va_list *arg, char *str);
 char			*ft_ftoa(long double n, t_flags *f);
 char			*handle_float(va_list *arg, t_flags *f);
 char			*ft_ftoa1(long double f);
+char			*ft_ftoa4(double n);
 
 #endif

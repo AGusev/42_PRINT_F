@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/21 23:21:15 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/22 00:20:15 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,8 @@ SRCS =	ft_printf.c \
 		srcs/handle_flags.c \
 		srcs/handle_precision.c \
 		srcs/ft_ftoa.c \
-		srcs/handle_float.c
+		srcs/handle_float.c \
+		srcs/ftoa4.c
 
 OFILES =ft_printf.o \
 		adding_minus.o \
@@ -65,7 +66,8 @@ OFILES =ft_printf.o \
 		handle_flags.o \
 		handle_precision.o \
 		ft_ftoa.o \
-		handle_float.o
+		handle_float.o \
+		ftoa4.o
 
 INCLUDES = -I ft_printf.h
 LIBFT_H = libft/libft.h

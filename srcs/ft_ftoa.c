@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/21 13:06:37 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/21 23:10:36 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/22 00:27:25 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void		ft_free2(char *s1, char *s2)
 		free(s2);
 }
 
-char			*ft_strfjoin(char *str1, char *str2, int a, int b)
+char			*ft_strfjoin1(char *str1, char *str2, int a, int b)
 {
 	char	*s1;
 	char	*s2;
@@ -210,7 +210,7 @@ char			*ft_ftoa1(long double f)
 	tmp = ft_lltoa(b);
 	if (6 - ft_strlen(tmp) > 0)
 		tmp = ft_strfjoinnchar(tmp, 6 - ft_strlen(tmp), '0');
-	s = ft_strfjoin(s, tmp, 1, 1);
+	s = ft_strfjoin1(s, tmp, 1, 1);
 	if (f < 0 && s[0] != '-')
 		s = ft_strfjoinnchar(s, 1, '-');
 	return (s);

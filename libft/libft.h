@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 16:26:46 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/18 21:13:18 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/22 00:24:08 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,5 +107,6 @@ char				*ft_update(char *str, char *update);
 int					ft_printing_string_wide(wchar_t *str);
 char				*ft_wstrdup(wchar_t *s1);
 int					ft_wstrlen(wchar_t *str);
+char				*ft_strfjoin(char **s1, char **s2, int pfree);
 
 #endif
