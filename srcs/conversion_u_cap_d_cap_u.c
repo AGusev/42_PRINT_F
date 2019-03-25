@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:49:22 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/24 22:21:33 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/25 14:45:13 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,12 @@ char			*conversion_u_cap_d_cap_u(va_list *arg, t_flags *flags)
 		tmp = (unsigned long)tmp;
 	else if (!ft_strcmp(flags->format, "hh"))
 		tmp = (unsigned char)tmp;
-// should be unsigned short
 	else if (!ft_strcmp(flags->format, "h"))
-		tmp = (unsigned long long)tmp;
+		tmp = (unsigned short)tmp;
 	else if (!ft_strcmp(flags->format, "j"))
 		tmp = (uintmax_t)tmp;
 	else if (!ft_strcmp(flags->format, "z"))
 		tmp = (size_t)tmp;
-//added
-	else if (flags->conversion == 'U')
-		tmp = (unsigned long long)tmp;
 	else
 		tmp = (unsigned int)tmp;
 	answer = ft_update(answer, ft_itoa_unsigned(tmp));

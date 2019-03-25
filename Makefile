@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/24 22:04:10 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/25 13:41:05 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,8 +126,8 @@ output:
 	@echo "$(GREEN)COMPILING libftprintf.a$(RESET)"
 	@echo "$(BLUE)COMPLETED$(RESET)"
 	@echo "$(YELLOW)PRINTING TEST$(RESET)"
-	@gcc $(FLAGS) $(NAME) $(INCLUDES) $(LIBFT) main.c
-	./a.out
+	@gcc $(FLAGS) -g $(NAME) $(INCLUDES) $(LIBFT) main.c
+
 
 main: fclean
 	make mclean

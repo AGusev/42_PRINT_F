@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 20:35:40 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/24 22:34:19 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/25 14:19:39 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int				main(void)
 
 // number of char
 
-	int		a;
+/*	int		a;
 	int		b;
 	int		c;
 
@@ -28,8 +28,20 @@ int				main(void)
 	c = printf("\033[1;33m\n\nChecking flags X:\033[0m\n\n%%.5s = %.5s\n%%c = %c\n%%#o = %#o\n%%u = %u\n%%-+5d = %-+5d\n%%10.4f = %10.4f\n%%0X = %0X\n%%#o = %#o\n\n", "asdefg", 'a', 12345, -123, 41245, 412415.8247223, 1214, -1);
 	//printf("ft = %d, reg = %d\n", a, b);
 	printf("\n");
-
+*/
 	// other
+
+
+	ft_printf("128  %b\n",128);
+	ft_printf("%%c = %c\n", 'a');
+	ft_printf("\n\n%%.5s = %.5s\n", "asdefg");
+	ft_printf("%%#o = %#o\n", 12345);
+	ft_printf("%%u = %u\n", -123);
+	ft_printf("%%-+5d = %-+5d\n", 412415);
+	ft_printf("%%10.4f = %10.4f\n", 8247223);
+	ft_printf("%%0x = %0x\n", 1214);
+	ft_printf("%%#o = %#o\n", -1);
+
 
 	ft_printf("\033[1;33mPrinting percent sign =\n\n\033[0m %%\n\n");
 
@@ -175,5 +187,6 @@ printf("%U", 4294967296);
 printf("\n\n\n\n");
 */
 
+	while (1);
 	return (0);
 }

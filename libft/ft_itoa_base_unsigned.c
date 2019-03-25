@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:26:48 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/22 17:45:56 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/25 12:54:04 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char					*ft_itoa_base_unsigned(uintmax_t value, int base)
 
 	tab = "0123456789abcdef";
 	str = itoa_filler(tab, value, base);
+//added
+//	ft_strdel(&str);
 	return (str);
 }
 
