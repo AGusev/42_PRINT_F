@@ -6,13 +6,13 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:02 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/22 00:08:35 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/22 17:33:47 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int			final_print(const char *format, char *str)
+int			ft_print2(const char *format, char *str)
 {
 	int		length;
 
@@ -23,7 +23,7 @@ int			final_print(const char *format, char *str)
 	return (length);
 }
 
-int			narrow_ft_printf(const char *format, va_list *arg, char *str)
+int			ft_printf1(const char *format, va_list *arg, char *str)
 {
 	t_flags		flags;
 	char		*next;
@@ -34,7 +34,7 @@ int			narrow_ft_printf(const char *format, va_list *arg, char *str)
 		length = 0;
 	next = ft_strchr(format, '%');
 	if (next == NULL)
-		return (length + final_print(format, str));
+		return (length + ft_print2(format, str));
 	tmp = ft_strccrt(format, '%');
 	str = ft_update(str, ft_strjoin(str, tmp));
 	free(tmp);
@@ -46,7 +46,7 @@ int			narrow_ft_printf(const char *format, va_list *arg, char *str)
 	++next;
 	free(tmp);
 	free(flags.format);
-	return (narrow_ft_printf(next, arg, str));
+	return (ft_printf1(next, arg, str));
 }
 
 int			ft_printf(const char *format, ...)
@@ -58,7 +58,7 @@ int			ft_printf(const char *format, ...)
 	length = 0;
 	str = ft_strnew(1);
 	va_start(arg, format);
-	length = narrow_ft_printf(format, &arg, str);
+	length = ft_printf1(format, &arg, str);
 	va_end(arg);
 	return (length);
 }

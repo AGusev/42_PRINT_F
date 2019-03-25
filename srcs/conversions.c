@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:50:16 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/21 23:44:10 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/24 21:06:27 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,18 @@ char		*conversions_extra(t_flags *flags, va_list *arg, char *answer)
 		answer = ft_update(answer, conversion_b(arg, flags));
 	if (flags->conversion == '%')
 		answer = ft_update(answer, ft_bchar(1, '%'));
-	if (flags->conversion == 'f' || flags->conversion == 'F')
+	if (flags->conversion == 'f')
 	{
-		answer = ft_update(answer, handle_float(arg, flags));
-//		answer = ft_update(answer, conversion_float(arg, flags));
+		answer = ft_update(answer, convers_f(arg, flags));
+		if (flags->plus == 1 && answer != 0)
+			answer = ft_update(answer, ft_strjoin("+", answer));
+		if (flags->zero_padding == 1 && answer != 0)
+		{
+			if (flags->zero_padding == 1)
+			{
+				answer = ft_update(answer, ft_strjoin(filler('0', flags->width - ft_strlen(answer)), answer));
+			}
+		}
 	}
 	return (answer);
 }

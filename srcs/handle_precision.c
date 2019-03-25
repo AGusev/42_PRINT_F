@@ -6,40 +6,40 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:51:52 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 22:09:44 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/24 13:16:05 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-void		ft_star_precision(int *star_precision, va_list *arg, \
+void		ft_precision1(int *precision1, va_list *arg, \
 								t_flags *flags)
 {
 	int		precision;
 
-	*star_precision = -1;
+	*precision1 = -1;
 	precision = va_arg(*arg, int);
 	flags->precision = precision;
 }
 
 char		*handling_precision(char **format, t_flags *flags, va_list *arg)
 {
-	int		star_precision;
+	int		precision1;
 
-	star_precision = 0;
+	precision1 = 0;
 	if (**format == '.')
 		while (**format == '.' || **format == '*' || ft_isdigit(**format))
 		{
 			flags->precision_exist = 1;
-			if (star_precision == 1 && ft_isdigit(**format))
+			if (precision1 == 1 && ft_isdigit(**format))
 				return (NULL);
-			if (star_precision != 0 && **format == '*')
+			if (precision1 != 0 && **format == '*')
 				return (NULL);
 			if (**format == '*')
-				ft_star_precision(&star_precision, arg, flags);
+				ft_precision1(&precision1, arg, flags);
 			if (ft_isdigit(**format))
 			{
-				star_precision = -1;
+				precision1 = -1;
 				flags->precision = flags->precision * 10 + **format - 48;
 			}
 			(*format)++;
