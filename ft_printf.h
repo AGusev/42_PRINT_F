@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:59:57 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/24 21:14:53 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/24 21:41:18 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,6 @@ typedef struct	s_flags
 	int			precision;
 	int			precision_exist;
 	int			null_char;
-	int			float_f;
-	int			float2;
-	int			float3;
 	int			length;
 	char		conversion;
 	char		*format;

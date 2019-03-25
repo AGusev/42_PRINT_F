@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 20:35:40 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/24 21:03:57 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/24 22:34:19 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,31 @@ int				main(void)
 	ft_printf("1    %b",1);
 	printf("\033[0m\n\n\n\n");
 
+printf("\n\n\n\033[1;30m****OTHER TESTS****\033[0m\n\n\n\n");
+
+ft_printf("%X", 42);
+printf("\n");
+printf("%X", 42);
+printf("\n\n\n");
+
+ft_printf("%hU", 4294967296);
+printf("\n");
+ft_printf("%U", 4294967296);
+printf("\n");
+
+
+printf("\n");
+//ft_printf("%Z");
+printf("\n");
+//printf("%Z");
+printf("\n");
+
+/*
+printf("\n\n\n");
+printf("%hU", 4294967296);
+printf("%U", 4294967296);
+printf("\n\n\n\n");
+*/
 
 	return (0);
 }

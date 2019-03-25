@@ -6,7 +6,7 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/13 21:39:24 by agusev            #+#    #+#              #
-#    Updated: 2019/03/24 13:15:18 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/24 21:19:49 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,7 @@ ft_itoa.c ft_memdel.c ft_strcapitalize.c ft_striteri.c ft_strrchr.c \
 ft_islower.c ft_isupper.c ft_itoa_base.c ft_abs.c \
 ft_bchar.c ft_putwchar.c ft_putwstr_fd.c ft_strccrt.c \
 ft_itoa_base_unsigned.c ft_itoa_intmax.c ft_itoa_unsigned.c \
-ft_putwchar_fd.c ft_wstrdup.c ft_wstrlen.c ft_strfjoin.c \
-ft_itoa_base_ll.c
+ft_putwchar_fd.c ft_wstrdup.c ft_wstrlen.c ft_strfjoin.c
 
 OBJ=ft_lstadd.o ft_memmove.o ft_strcat.o ft_strjoin.o ft_strrev.o \
 ft_lstdel.o ft_memset.o ft_strchr.o ft_strlcat.o ft_strsplit.o \
@@ -47,8 +46,7 @@ ft_itoa.o ft_memdel.o ft_strcapitalize.o ft_striteri.o ft_strrchr.o \
 ft_islower.o ft_isupper.o ft_itoa_base.o ft_abs.o \
 ft_bchar.o ft_putwchar.o ft_putwstr_fd.o ft_strccrt.o \
 ft_itoa_base_unsigned.o ft_itoa_intmax.o ft_itoa_unsigned.o \
-ft_putwchar_fd.o ft_wstrdup.o ft_wstrlen.o ft_strfjoin.o \
-ft_itoa_base_ll.o
+ft_putwchar_fd.o ft_wstrdup.o ft_wstrlen.o ft_strfjoin.o
 
 INCL=./
 
