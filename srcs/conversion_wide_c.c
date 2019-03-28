@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:49:30 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 22:07:17 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/27 21:23:10 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ char			*conversion_wide_c(va_list *arg, int *length, t_flags *flags)
 	}
 	else
 		str = ft_bchar(1, chr);
+//added
+	free(str);
 	return (str);
 }

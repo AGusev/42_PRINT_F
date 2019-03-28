@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:41:50 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 22:04:18 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/27 21:08:52 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ char		*adding_minus(t_flags *flags, char *str)
 	}
 	tmp = ft_strnew(1);
 	tmp = ft_update(tmp, ft_strjoin("-", str));
+	//added
+	free(tmp);
 	return (tmp);
 }

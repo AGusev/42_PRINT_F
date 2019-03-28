@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:48:56 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 22:07:07 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/27 21:19:30 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@ char			*conversion_p(va_list *arg)
 	tmp = va_arg(*arg, unsigned long);
 	answer = ft_update(answer, ft_itoa_base(tmp, 16));
 	answer = ft_update(answer, ft_strjoin("0x", answer));
+//added
+	free(answer);
 	return (answer);
 }

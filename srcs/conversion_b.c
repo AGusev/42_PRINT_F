@@ -26,5 +26,7 @@ char			*conversion_b(va_list *arg, t_flags *flags)
 	answer = ft_update(answer, ft_itoa_base_unsigned(tmp, 2));
 	if (flags->hashtag == 1 && tmp != 0)
 		answer = ft_update(answer, ft_strjoin("0x", answer));
+//added
+	free(answer);
 	return (answer);
 }

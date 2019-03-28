@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:47:20 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 22:06:21 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/27 21:10:12 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char		*creating_precision_string(t_flags *flags, char *str)
 		++str;
 	}
 	tmp[i] = '\0';
+	//added
+	free(tmp);
 	return (tmp);
 }
 
@@ -54,5 +56,6 @@ char		*adding_precision_number(t_flags *flags, char *str)
 		return (tmp);
 	}
 	tmp = ft_update(tmp, creating_precision_string(flags, str));
+	free(tmp);
 	return (tmp);
 }

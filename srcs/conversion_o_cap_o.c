@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/19 17:30:42 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/21 23:41:38 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/27 21:22:32 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ char			*conversion_o_cap_o(va_list *arg, t_flags *flags)
 	answer = ft_itoa_base_unsigned(tmp, 8);
 	if (flags->hashtag == 1 && tmp != 0)
 		answer = ft_update(answer, ft_strjoin("0", answer));
+//added
+	free(answer);
 	return (answer);
 }

@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 20:49:08 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 22:07:10 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/27 21:19:00 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ char		*conversion_s(va_list *arg)
 		str = ft_strdup("(null)");
 	else
 		str = ft_strdup(tmp);
+//added
+	free(str);
 	return (str);
 }
