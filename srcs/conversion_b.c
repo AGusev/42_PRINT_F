@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   conversion_b.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/03/29 00:43:19 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 00:43:19 by agusev           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../ft_printf.h"
 
@@ -26,7 +36,5 @@ char			*conversion_b(va_list *arg, t_flags *flags)
 	answer = ft_update(answer, ft_itoa_base_unsigned(tmp, 2));
 	if (flags->hashtag == 1 && tmp != 0)
 		answer = ft_update(answer, ft_strjoin("0x", answer));
-//added
-	free(answer);
 	return (answer);
 }

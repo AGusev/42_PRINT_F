@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/15 20:26:48 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/27 20:46:48 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/29 01:25:28 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 01:25:34 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,7 @@ char					*ft_itoa_base_unsigned(uintmax_t value, int base)
 	char				*str;
 	char				*tab;
 
-	str = NULL;
 	tab = "0123456789abcdef";
 	str = itoa_filler(tab, value, base);
 	return (str);
 }
-

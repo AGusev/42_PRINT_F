@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/18 21:44:09 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/24 21:48:27 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/29 01:30:14 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 01:30:15 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,19 @@
 
 char	*ft_strtoupper(char *str)
 {
-	char	*res;
+	char	*new;
+	int		i;
 
-	res = str;
-	while (*str != '\0')
+	new = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
+	i = 0;
+	while (str[i])
 	{
-		if (*str <= 'z' && *str >= 'a')
-			*str = *str - 32;
-		str++;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			new[i] = str[i] - 32;
+		else
+			new[i] = str[i];
+		++i;
 	}
-	return (res);
+	new[i] = '\0';
+	return (new);
 }

@@ -6,16 +6,16 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/24 13:05:46 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/27 20:49:51 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/29 00:16:48 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-char			*filler(int c, int len)
+char				*filler(int c, int len)
 {
-	char * s;
-	int i;
+	char	*s;
+	int		i;
 
 	s = malloc(len + 1);
 	i = 0;
@@ -25,15 +25,13 @@ char			*filler(int c, int len)
 		i++;
 	}
 	s[i] = '\0';
-	free (s);
 	return (s);
 }
 
-
-static void		prepare_float1(int *sign, long double *n, t_flags *f)
+static void			prepare_float1(int *sign, long double *n, t_flags *f)
 {
-	long double	pi;
-	int			i;
+	long double		pi;
+	int				i;
 
 	i = 0;
 	pi = 0.5;
@@ -49,7 +47,7 @@ static void		prepare_float1(int *sign, long double *n, t_flags *f)
 	*n += pi;
 }
 
-static char		*ft_ftoa5(long double n, t_flags *f)
+static char			*ft_ftoa5(long double n, t_flags *f)
 {
 	int			len;
 	char		*dst;
@@ -58,7 +56,7 @@ static char		*ft_ftoa5(long double n, t_flags *f)
 	int			pos;
 
 	prepare_float1(&sign, &n, f);
-	dec = ft_itoa_base((long long int) n, 10);
+	dec = ft_itoa_base((long long int)n, 10);
 	len = ft_strlen(dec);
 	dst = ft_strnew(sign + len + 1 + ((f->precision > 0) ? f->precision : 0));
 	pos = sign;
@@ -77,7 +75,7 @@ static char		*ft_ftoa5(long double n, t_flags *f)
 	return (dst);
 }
 
-char			*convert_float_nbr(void *p, t_flags *f)
+char				*convert_float_nbr(void *p, t_flags *f)
 {
 	char		*str;
 
@@ -86,7 +84,7 @@ char			*convert_float_nbr(void *p, t_flags *f)
 	return (str);
 }
 
-char			*convers_f(va_list *args, t_flags *f)
+char				*convers_f(va_list *args, t_flags *f)
 {
 	long double	n;
 

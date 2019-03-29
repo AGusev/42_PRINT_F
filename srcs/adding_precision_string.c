@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/15 20:47:33 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/27 21:11:36 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/29 00:42:47 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 00:42:48 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,5 @@ char			*adding_precision_string(t_flags *flags, char *str)
 	if (flags->precision >= (int)ft_strlen(str))
 		return (tmp);
 	tmp = ft_update(tmp, ft_strsub(str, 0, flags->precision));
-	//added
-	free(tmp);
 	return (tmp);
 }

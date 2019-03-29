@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/15 20:48:33 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/27 21:15:10 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/29 00:43:28 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 00:43:29 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,5 @@ char		*conversion_c(va_list *arg, int *length, t_flags *flags)
 	}
 	else
 		str = ft_bchar(1, (char)tmp);
-//added
-	free(str);
 	return (str);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/15 20:52:08 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/21 23:42:33 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/29 00:41:25 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 00:41:26 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,3 @@ int			parse_flags(char **format, t_flags *flags, va_list *arg)
 		flags->conversion = 'S';
 	return (1);
 }
-

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/15 20:52:00 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/17 22:11:32 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/29 00:41:12 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 00:41:15 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,15 @@ char		*handling_width(char **format, t_flags *flags, va_list *arg)
 	star_width = 0;
 	while (**format == '*' || ft_isdigit(**format))
 	{
-		if ((star_width == 1 && ft_isdigit(**format)) || (star_width != 0 && **format == '*'))
+		if ((star_width == 1 && ft_isdigit(**format)) || \
+			(star_width != 0 && **format == '*'))
 			return (NULL);
 		if (**format == '*')
 			ft_star_width(&star_width, arg, flags);
 		if (ft_isdigit(**format))
 		{
 			star_width = -1;
-			flags->width = (flags->width * 10) + (**format - 48);
+			flags->width = flags->width * 10 + **format - 48;
 		}
 		(*format)++;
 	}

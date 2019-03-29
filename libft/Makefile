@@ -5,48 +5,53 @@
 #                                                     +:+ +:+         +:+      #
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/02/13 21:39:24 by agusev            #+#    #+#              #
-#    Updated: 2019/03/24 21:19:49 by agusev           ###   ########.fr        #
+#    Created: 2019/03/29 01:37:17 by agusev            #+#    #+#              #
+#    Updated: 2019/03/29 01:37:19 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=libft.a
+NAME = libft.a
+SRC = 	./ft_helper_1.c \
+		./ft_itoa_base.c \
+		./ft_itoa_base_unsigned.c \
+		./ft_itoa_intmax.c \
+		./ft_memcpy.c \
+		./ft_strccrt.c \
+		./ft_strchr.c \
+		./ft_strdel.c \
+		./ft_strdup.c \
+		./ft_strjoin.c \
+		./ft_strlen.c \
+		./ft_strnew.c \
+		./ft_strtoupper.c \
+		./ft_update.c \
+		./ft_wstrdup.c \
+		./ft_wstrlen.c \
+		./ft_strcmp.c \
+		./ft_itoa_unsigned.c \
+		./ft_strcpy.c \
+		./ft_strsub.c
 
-SRC=ft_lstadd.c ft_memmove.c ft_strcat.c ft_strjoin.c ft_strrev.c \
-ft_lstdel.c ft_memset.c ft_strchr.c ft_strlcat.c ft_strsplit.c \
-ft_atoi.c ft_lstdelone.c ft_nbrlen.c ft_strclr.c ft_strlen.c ft_strstr.c \
-ft_bzero.c ft_lstiter.c ft_putchar.c ft_strcmp.c ft_strmap.c ft_strsub.c \
-ft_isalnum.c ft_lstmap.c ft_putchar_fd.c ft_strcpy.c ft_strmapi.c \
-ft_isalpha.c ft_lstnew.c ft_putendl.c ft_strdel.c ft_strncat.c ft_strtoupper.c \
-ft_isascii.c ft_memalloc.c ft_putendl_fd.c ft_strdup.c ft_strncmp.c \
-ft_strtrim.c ft_strtolower.c ft_toupper.c ft_update.c ft_printing_wide_string.c \
-ft_isdigit.c ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strncpy.c ft_tolower.c \
-ft_isprint.c ft_memchr.c ft_putnbr_fd.c ft_str_is_lowercase.c ft_strnequ.c \
-ft_iswhitespace.c ft_memcmp.c ft_putstr.c ft_str_is_uppercase.c ft_strnew.c \
-ft_isspace.c ft_memcpy.c ft_putstr_fd.c ft_striter.c ft_strnstr.c \
-ft_itoa.c ft_memdel.c ft_strcapitalize.c ft_striteri.c ft_strrchr.c \
-ft_islower.c ft_isupper.c ft_itoa_base.c ft_abs.c \
-ft_bchar.c ft_putwchar.c ft_putwstr_fd.c ft_strccrt.c \
-ft_itoa_base_unsigned.c ft_itoa_intmax.c ft_itoa_unsigned.c \
-ft_putwchar_fd.c ft_wstrdup.c ft_wstrlen.c ft_strfjoin.c
-
-OBJ=ft_lstadd.o ft_memmove.o ft_strcat.o ft_strjoin.o ft_strrev.o \
-ft_lstdel.o ft_memset.o ft_strchr.o ft_strlcat.o ft_strsplit.o \
-ft_atoi.o ft_lstdelone.o ft_nbrlen.o ft_strclr.o ft_strlen.o ft_strstr.o \
-ft_bzero.o ft_lstiter.o ft_putchar.o ft_strcmp.o ft_strmap.o ft_strsub.o \
-ft_isalnum.o ft_lstmap.o ft_putchar_fd.o ft_strcpy.o ft_strmapi.o \
-ft_isalpha.o ft_lstnew.o ft_putendl.o ft_strdel.o ft_strncat.o ft_strtoupper.o \
-ft_isascii.o ft_memalloc.o ft_putendl_fd.o ft_strdup.o ft_strncmp.o \
-ft_strtrim.o ft_strtolower.o ft_toupper.o ft_update.o ft_printing_wide_string.o \
-ft_isdigit.o ft_memccpy.o ft_putnbr.o ft_strequ.o ft_strncpy.o ft_tolower.o \
-ft_isprint.o ft_memchr.o ft_putnbr_fd.o ft_str_is_lowercase.o ft_strnequ.o \
-ft_iswhitespace.o ft_memcmp.o ft_putstr.o ft_str_is_uppercase.o ft_strnew.o \
-ft_isspace.o ft_memcpy.o ft_putstr_fd.o ft_striter.o ft_strnstr.o \
-ft_itoa.o ft_memdel.o ft_strcapitalize.o ft_striteri.o ft_strrchr.o \
-ft_islower.o ft_isupper.o ft_itoa_base.o ft_abs.o \
-ft_bchar.o ft_putwchar.o ft_putwstr_fd.o ft_strccrt.o \
-ft_itoa_base_unsigned.o ft_itoa_intmax.o ft_itoa_unsigned.o \
-ft_putwchar_fd.o ft_wstrdup.o ft_wstrlen.o ft_strfjoin.o
+OBJ =   ./ft_helper_1.o \
+		./ft_itoa_base.o \
+		./ft_itoa_base_unsigned.o \
+		./ft_itoa_intmax.o \
+		./ft_memcpy.o \
+		./ft_strccrt.o \
+		./ft_strchr.o \
+		./ft_strdel.o \
+		./ft_strdup.o \
+		./ft_strjoin.o \
+		./ft_strlen.o \
+		./ft_strnew.o \
+		./ft_strtoupper.o \
+		./ft_update.o \
+		./ft_wstrdup.o \
+		./ft_wstrlen.o \
+		./ft_strcmp.o \
+		./ft_itoa_unsigned.o \
+		./ft_strcpy.o \
+		./ft_strsub.o
 
 INCL=./
 

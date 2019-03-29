@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/15 20:49:37 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/27 21:15:56 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/29 00:44:02 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 00:44:03 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,5 @@ char			*conversion_wide_s(va_list *arg)
 
 	tmp_str = va_arg(*arg, wchar_t *);
 	str = ft_wstrdup(tmp_str);
-//added
-	free(str);
 	return (str);
 }

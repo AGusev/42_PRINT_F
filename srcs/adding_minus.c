@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/15 20:41:50 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/27 21:08:52 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/29 00:42:29 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 00:42:31 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,13 @@ char		*adding_minus(t_flags *flags, char *str)
 {
 	char	*tmp;
 
-	if (flags->conversion != 'd' && flags->conversion != 'i' \
-		&& flags->conversion != 'D')
+	if (flags->conversion != 'd' && flags->conversion != 'i' && \
+			flags->conversion != 'D')
 	{
 		tmp = ft_strdup(str);
 		return (tmp);
 	}
 	tmp = ft_strnew(1);
 	tmp = ft_update(tmp, ft_strjoin("-", str));
-	//added
-	free(tmp);
 	return (tmp);
 }

@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 20:35:40 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/27 20:43:31 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/28 21:38:50 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,14 @@ int				main(void)
 
 // number of char
 
-/*	int		a;
+	int		a;
 	int		b;
-	int		c;
 
 	a = ft_printf("\033[1;33m\n\nChecking flags ft_printf:\033[0m\n\n%%.5s = %.5s\n%%c = %c\n%%#o = %#o\n%%u = %u\n%%-+5d = %-+5d\n%%10.4f = %10.4f\n%%0x = %0x\n%%#o = %#o\n", "asdefg", 'a', 12345, -123, 41245, 412415.8247223, 1214, -1);
 	b = printf("\033[1;33m\n\nChecking flags printf:\033[0m\n\n%%.5s = %.5s\n%%c = %c\n%%#o = %#o\n%%u = %u\n%%-+5d = %-+5d\n%%10.4f = %10.4f\n%%0x = %0x\n%%#o = %#o\n\n", "asdefg", 'a', 12345, -123, 41245, 412415.8247223, 1214, -1);
-	c = printf("\033[1;33m\n\nChecking flags X:\033[0m\n\n%%.5s = %.5s\n%%c = %c\n%%#o = %#o\n%%u = %u\n%%-+5d = %-+5d\n%%10.4f = %10.4f\n%%0X = %0X\n%%#o = %#o\n\n", "asdefg", 'a', 12345, -123, 41245, 412415.8247223, 1214, -1);
 	//printf("ft = %d, reg = %d\n", a, b);
 	printf("\n");
-*/
+
 	// other
 
 
@@ -38,7 +36,7 @@ int				main(void)
 	ft_printf("%%#o = %#o\n", 12345);
 	ft_printf("%%u = %u\n", -123);
 	ft_printf("%%-+5d = %-+5d\n", 412415);
-	ft_printf("%%10.4f = %10.4f\n", 8247223);
+	ft_printf("%%10.4f = %10.4f\n", 412415.8247223);
 	ft_printf("%%0x = %0x\n", 1214);
 	ft_printf("%%#o = %#o\n", -1);
 
@@ -125,10 +123,11 @@ int				main(void)
 	printf("printf    %-20f\n", 93847587871.123);
 	printf("\n");
 
-
+//leaks
 	ft_printf("ft_printf %020.2f\n", 93847587871.123);
 	printf("printf    %020.2f\n", 93847587871.123);
 	printf("\n");
+
 
 
 	ft_printf("ft_printf %#20.2f\n", 93847587871.123);
@@ -162,12 +161,12 @@ int				main(void)
 	printf("\033[0m\n\n\n\n");
 
 printf("\n\n\n\033[1;30m****OTHER TESTS****\033[0m\n\n\n\n");
-
+/*
 ft_printf("%X", 42);
 printf("\n");
 printf("%X", 42);
 printf("\n\n\n");
-
+*/
 ft_printf("%hU", 4294967296);
 printf("\n");
 ft_printf("%U", 4294967296);

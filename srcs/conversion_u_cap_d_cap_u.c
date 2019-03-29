@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/15 20:49:22 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/27 21:17:03 by agusev           ###   ########.fr       */
+/*   Created: 2019/03/29 00:43:45 by agusev            #+#    #+#             */
+/*   Updated: 2019/03/29 00:43:46 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,5 @@ char			*conversion_u_cap_d_cap_u(va_list *arg, t_flags *flags)
 	else
 		tmp = (unsigned int)tmp;
 	answer = ft_update(answer, ft_itoa_unsigned(tmp));
-//added
-	free(answer);
 	return (answer);
 }
