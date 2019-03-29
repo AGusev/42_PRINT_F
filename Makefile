@@ -6,62 +6,63 @@
 #    By: agusev <agusev@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/13 19:33:35 by agusev            #+#    #+#              #
-#    Updated: 2019/03/27 20:41:50 by agusev           ###   ########.fr        #
+#    Updated: 2019/03/29 13:03:38 by agusev           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 SRCS =	ft_printf.c \
-		srcs/adding_minus.c \
-		srcs/adding_precision_string.c \
-		srcs/adding_width_null_char.c \
-		srcs/conversion_d_i.c \
-		srcs/conversion_u_cap_d_cap_u.c \
-		srcs/conversion_o_cap_o.c \
-		srcs/conversion_x_cap_x.c \
-		srcs/handle_width.c \
-		srcs/adding_plus.c \
-		srcs/adding_space.c \
-		srcs/conversion_b.c \
-		srcs/conversion_p.c \
-		srcs/conversion_wide_c.c \
-		srcs/conversions.c \
-		srcs/handle_format.c \
-		srcs/parse_flags.c \
-		srcs/adding_precision_number.c \
-		srcs/adding_width.c \
-		srcs/conversion_c.c \
-		srcs/conversion_s.c \
-		srcs/conversion_wide_s.c \
-		srcs/handle_flags.c \
-		srcs/handle_precision.c \
-		srcs/conversion_f.c
+		srcs/conversions/conversion_d_i.c \
+		srcs/conversions/conversion_u_cap_d_cap_u.c \
+		srcs/conversions/conversion_o_cap_o.c \
+		srcs/conversions/conversion_x_cap_x.c \
+		srcs/conversions/conversion_c.c \
+		srcs/conversions/conversion_s.c \
+		srcs/conversions/conversion_wide_s.c \
+		srcs/conversions/conversion_f.c \
+		srcs/conversions/conversions.c \
+		srcs/conversions/conversion_b.c \
+		srcs/conversions/conversion_p.c \
+		srcs/conversions/conversion_wide_c.c \
+		srcs/formats/adding_minus.c \
+		srcs/formats/adding_precision_string.c \
+		srcs/formats/adding_width_null_char.c \
+		srcs/formats/handle_width.c \
+		srcs/formats/adding_plus.c \
+		srcs/formats/adding_space.c \
+		srcs/formats/handle_format.c \
+		srcs/formats/parse_flags.c \
+		srcs/formats/adding_precision_number.c \
+		srcs/formats/adding_width.c \
+		srcs/formats/handle_flags.c \
+		srcs/formats/handle_precision.c
 
-OFILES =ft_printf.o \
-		adding_minus.o \
-		adding_precision_string.o \
-		adding_width_null_char.o \
-		conversion_d_i.o \
-		conversion_u_cap_d_cap_u.o \
-		conversion_o_cap_o.o \
-		conversion_x_cap_x.o \
-		handle_width.o \
-		adding_plus.o \
-		adding_space.o \
-		conversion_b.o \
-		conversion_p.o \
-		conversion_wide_c.o \
-		conversions.o \
-		handle_format.o \
-		parse_flags.o \
-		adding_precision_number.o \
-		adding_width.o \
-		conversion_c.o \
-		conversion_s.o \
-		conversion_wide_s.o \
-		handle_flags.o \
-		handle_precision.o \
-		conversion_f.o
+
+OFILES =./ft_printf.o \
+		./conversion_d_i.o \
+		./conversion_u_cap_d_cap_u.o \
+		./conversion_o_cap_o.o \
+		./conversion_x_cap_x.o \
+		./conversion_b.o \
+		./conversion_p.o \
+		./conversion_wide_c.o \
+		./conversions.o \
+		./conversion_c.o \
+		./conversion_s.o \
+		./conversion_wide_s.o \
+		./conversion_f.o\
+		./adding_minus.o \
+		./adding_precision_string.o \
+		./adding_width_null_char.o \
+		./handle_width.o \
+		./adding_plus.o \
+		./adding_space.o \
+		./handle_format.o \
+		./parse_flags.o \
+		./adding_precision_number.o \
+		./adding_width.o \
+		./handle_flags.o \
+		./handle_precision.o
 
 INCLUDES = -I ft_printf.h
 LIBFT_H = libft/libft.h
