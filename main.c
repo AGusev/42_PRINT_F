@@ -6,7 +6,7 @@
 /*   By: agusev <agusev@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/18 20:35:40 by agusev            #+#    #+#             */
-/*   Updated: 2019/03/29 14:33:30 by agusev           ###   ########.fr       */
+/*   Updated: 2019/03/29 17:51:25 by agusev           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int				main(void)
 
 	ft_printf("128  %b\n",128);
 	ft_printf("%%c = %c\n", 'a');
-	ft_printf("\n\n%%.5s = %.5s\n", "asdefg");
+	ft_printf("\n\n%%.3s = %.3s\n", "asdefggjgyu");
 	ft_printf("%%#o = %#o\n", 12345);
 	ft_printf("%%u = %u\n", -123);
 	ft_printf("%%-+5d = %-+5d\n", 412415);
