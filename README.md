@@ -1,6 +1,6 @@
 # 42_PRINT_F
 
-# ft_printf is a project where I re-coded C system function "printf". 
+FT_PRINTF is a project where I re-coded C system function "printf". 
 
 Implemented conversions:  sSpdDioOuUxXcC%
 
